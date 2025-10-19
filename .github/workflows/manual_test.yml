@@ -1,0 +1,17 @@
+name: Manual_test
+on:
+  workflow_dispatch:
+    inputs:
+      greeting:
+        type: string
+        default: Hello
+        required: true
+        description: A cheerful word
+jobs:
+  run:
+    runs-on: windows-latest
+    env:
+      USERNAME: ${{ vars.USERNAME_TEST }}
+    steps:
+      - run: echo "${{ inputs.greeting }}"
+      - run: echo "${USERNAME_TEST}"
