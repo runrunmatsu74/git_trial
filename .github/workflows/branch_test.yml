@@ -4,6 +4,6 @@ jobs:
   skip-or-run:
     runs-on: windows-latest
     steps:
-      - run: echo "Hello"
       - run: echo "${{ github.run_id }}"
+      - run: echo "Hello"
         if: ${{ contains(github.run_id, '1') }}
