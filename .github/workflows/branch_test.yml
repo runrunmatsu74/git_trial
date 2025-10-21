@@ -5,5 +5,5 @@ jobs:
     runs-on: windows-latest
     steps:
       - run: echo "Hello"
-        run: echo ${{ github.run_id }}
+        run: echo "${{ github.run_id }}"
         if: ${{ contains(github.run_id, '1') }}
